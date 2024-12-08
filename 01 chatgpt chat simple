@@ -1,0 +1,7 @@
+import openai
+openai.api_key = "APIkeys"
+
+
+
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "give me 3 best basketball players in history and give me the reasons"}])
+print(completion.choices[0].message.content)
